@@ -1,5 +1,5 @@
 import React from "react";
-import CardGame from "../CardGame/CardGame";
+import CardGame from "../../Component/CardGame/CardGame";
 import "./Style.css";
 function Home(){
     return(

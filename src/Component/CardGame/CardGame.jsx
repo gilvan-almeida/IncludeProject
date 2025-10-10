@@ -1,6 +1,6 @@
 import React from "react";
 import gtaimg from "../../assets/gtaImg.jpg";
-import ButtonComponent from "../../Component/Button/ButtonComponet";
+import ButtonComponent from "../Button/ButtonComponet";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import "./Style.css";
 
