@@ -2,6 +2,11 @@ import React from "react";
 import CardGame from "../../Component/CardGame/CardGame";
 import imgGame from "../../assets/gtaImg.jpg"
 import "./Style.css";
+import ButtonComponent from "../../Component/Button/ButtonComponet";
+import PesquisaBar from "../../Component/PesquisaBar/PesquisaBar";
+import Select from "../../Component/Select/Select";
+import NavBar from "../../Component/NavBar/NavBar";
+
 function Home(){
       const jogos = [
         { title: "Mafia", description: "Ação e mistério", image: imgGame, platform: ["pc", "playstation"] },
@@ -10,10 +15,12 @@ function Home(){
 
     ];
     return(
-        <div>
+        <div className="containerHome">
+            <NavBar/>
             <p>
                 olatela Home
             </p>
+
             <div className="cardsContainer">
                 {jogos.map((jogo, index)=>(
                     <CardGame
@@ -25,8 +32,6 @@ function Home(){
 
                 ))}
             </div>
-
-
         </div>
     )
 }

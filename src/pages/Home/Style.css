@@ -1,6 +1,18 @@
+html, body, #root {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+.containerHome {
+    background-color: black;
+    height: 100%;
+    width: 100%;
+}
+
+
+
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-
 }

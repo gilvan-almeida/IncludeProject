@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+.boxNavbar{
+    display: flex;
+}
+
+.boxLog{
+    flex: 1;
+}
+
+.boxPesquisa{
+    flex: 4;
+}
+
+.boxLinks{
+    flex: 2;
+}
+.tileBox{
+    font-family: 'Roboto', sans-serif;
+}

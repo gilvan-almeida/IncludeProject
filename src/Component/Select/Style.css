@@ -1,0 +1,26 @@
+.boxSelect{
+    height: 50px;
+    width: 16%;
+    position: relative;
+    align-items: center ;
+    background-color: #1e1e1e;
+    display: flex;
+    padding: 0 10px;
+    color: white;
+    border-radius: 15px;
+}
+.selectOption {
+    width: 80%;
+    height: 60%;
+    background: #5f5c5c;
+    border: none;
+    color: white;
+    font-size: 12px;
+    border-radius: 15px;; 
+    padding: 0 10px;
+    font-family: sans-serif;
+}
+
+.boxSelect:hover{
+    opacity: 0.8;
+}
