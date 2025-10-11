@@ -6,7 +6,7 @@ import "./Style.css";
 function Footer(){
     return(
         <div className="boxFooter">
-            <div className="boxLog">
+            <div className="boxLogoFooter">
                 <IoGameController size={25} />
                 <h3 className="tileBox">
                     G A M E
@@ -17,11 +17,17 @@ function Footer(){
             </div>
             <div className="boxIcons">
                 <a className="boxLink">
-                    <FaDiscord size={20} color="#ffffff"/>
+                    <FaDiscord size={28} color="black"/>
                 </a>
-                <FaInstagram size={20}/>
-                <FaGithub size={20}/>
-                <FaLinkedin size={20}/>
+                <a className="boxLink">
+                    <FaInstagram size={28} color="black"/>
+                </a>
+                <a className="boxLink">
+                    <FaGithub size={28} color="black"/>
+                </a>
+                <a className="boxLink">  
+                    <FaLinkedin size={28} color="black"/> 
+                </a>
             </div>
         </div>
     );

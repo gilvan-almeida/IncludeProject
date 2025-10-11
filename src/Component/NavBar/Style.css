@@ -6,6 +6,9 @@
     width: 100%;
     height: 70px;
     background-color: black;
+    border-bottom: 2px solid rgb(59, 58, 58);
+
+
 }
 
 .boxLog{
