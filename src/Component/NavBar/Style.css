@@ -2,10 +2,22 @@
 
 .boxNavbar{
     display: flex;
+    align-items: center;
+    width: 100%;
+    height: 70px;
+    background-color: black;
 }
 
 .boxLog{
     flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.tileBox{
+    margin-left: 15px;
 }
 
 .boxPesquisa{
@@ -14,6 +26,15 @@
 
 .boxLinks{
     flex: 2;
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+    font-family: 'Roboto', sans-serif;  
+    font-weight: bold;
+}
+.boxLinks a{
+    text-decoration: none;
+    color: white;
 }
 .tileBox{
     font-family: 'Roboto', sans-serif;

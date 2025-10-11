@@ -7,7 +7,8 @@
     display: flex;
     padding: 0 10px;
     color: white;
-    border-radius: 15px;
+    gap: 15px;
+    border-radius: 10px;
 }
 .selectOption {
     width: 80%;
@@ -16,11 +17,12 @@
     border: none;
     color: white;
     font-size: 12px;
-    border-radius: 15px;; 
+    border-radius: 10px;; 
     padding: 0 10px;
     font-family: sans-serif;
 }
 
 .boxSelect:hover{
     opacity: 0.8;
+    transition: 0.3s ease;
 }

@@ -1,0 +1,22 @@
+.boxFooter{
+    display: flex;
+    margin-top: 40px;
+    border-top: 1px solid red;
+    height: 100px;
+    flex: 1;
+
+}
+.boxDescFooter{
+    flex: 3;
+    color: white;
+}
+.boxIcons{
+    flex: 1;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+}
+
+.boxLink{
+    border: 1px solid white;
+}

@@ -1,18 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 html, body, #root {
     height: 100%;
     margin: 0;
     padding: 0;
+        background-color: black;
 }
-.containerHome {
+.boxTextTitle {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* .containerHome {
     background-color: black;
     height: 100%;
     width: 100%;
+}  */
+
+.titleMain{
+    margin: 0px;
+    color: black;
+    font-family: 'Roboto', sans-serif; 
+    font-weight: bold;
+    font-size: 40px;
+    color: white;
 }
-
-
-
+.subTitle{
+    margin: 0px;
+    padding: 0px;
+    color: black;
+    font-family: 'Roboto', sans-serif; 
+    font-size: 20px;
+    color: white;
+}
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
 }
+.aligBoxMain{
+    display: grid;
+    place-items: center;
+}
+.boxMain{
+    width: 80%;
+}
+

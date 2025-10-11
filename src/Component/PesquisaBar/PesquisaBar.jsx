@@ -1,5 +1,6 @@
 import React from "react";
 import lupa from '../../assets/lupa.png';   
+import { FaSearch } from "react-icons/fa";
 import './Style.css';
 
 function PesquisaBar(){
@@ -10,7 +11,7 @@ function PesquisaBar(){
                 placeholder="Digite Aqui"
                 className="inputPesquisa"
             />
-            <img src={lupa} alt="Lupa" className="iconPesquisa" />
+            <FaSearch size={20} className="iconPesquisa" />
         </div>
     )
 }
