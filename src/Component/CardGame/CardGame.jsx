@@ -1,33 +1,28 @@
 import React from "react";
-import gtaimg from "../../assets/gtaImg.jpg";
 import ButtonComponent from "../Button/ButtonComponet";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import "./Style.css";
 
-function CardGame() {
+function CardGame({title, plataform = [], description, img, date}) {
   return (
     <div className="boxCard">
       <div className="imgBox">
-        <img src={gtaimg} alt="game" />
+        <img src={img} alt="game" />
       </div>
-
       <div className="iconsBox">
-        <FaPlaystation size={24} />
-        <FaXbox size={20} />
-        <FaWindows size={20} />
+        {plataform.includes("xbox") && (<FaXbox size={20} />)}
+        {plataform.includes("playstation") && (<FaPlaystation size={24} />)}
+        {plataform.includes("pc") && (<FaWindows size={20} />)}
       </div>
 
       <div className="boxText">
-        <h3 className="titleBox">GTA VI</h3>
+        <h3 className="titleBox">{title}</h3>
         <p className="descBox">
-          Essa é uma descrição curta do game. Essa é uma descrição curta do game.
-          Essa é uma descrição curta do game. Essa é uma descrição curta do game.
-          Essa é uma descrição curta do game. Essa é uma descrição curta do game.
-
+          {description}
         </p>
       </div>
       <div className="extraInfo">
-        <p>Lançamento: 2025</p>
+        <p>Lançamento: {date}</p>
         <div className="boxButton">
           <ButtonComponent height={35} width={100} title={"Detalhes"} />
         </div>
