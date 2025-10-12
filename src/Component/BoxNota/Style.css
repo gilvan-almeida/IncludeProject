@@ -1,0 +1,27 @@
+.boxNota {
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column; /* empilha “Nota” em cima do número */
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+}
+
+.labelNota {
+    font-size: 12px; 
+    opacity: 0.8;    
+    margin: 0;
+    line-height: 1;
+}
+
+.valorNota {
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.2;
+}

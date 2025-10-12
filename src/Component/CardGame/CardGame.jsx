@@ -1,18 +1,11 @@
 import React from "react";
 import ButtonComponent from "../Button/ButtonComponet";
+import BoxNota from "../BoxNota/BoxNota";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import "./Style.css";
 
-function CardGame({ title, plataform = [], description, img, date, nota}) {
-  function colorNote(){
-      if(nota >= 70){
-          return "#00ce7a" 
-      }else if(nota < 70 && nota > 50){
-        return "#ffbd3f"
-      }
 
-      return "#ff6874"
-  }
+function CardGame({ title, plataform = [], description, img, date, nota}) {
   return (
     <div className="boxCard">
       <div className="imgBox">
@@ -29,7 +22,10 @@ function CardGame({ title, plataform = [], description, img, date, nota}) {
             <h3 className="titleBox">{title}</h3>
           </div>
         </div>
-        <h3 className="boxNota" style={{backgroundColor: colorNote(nota)}}>{nota}</h3>
+        <BoxNota
+          nota={nota}
+        />
+        {/* <h3 className="boxNota" style={{backgroundColor: colorNote(nota)}}>{nota}</h3> */}
       </div>
 
       <div className="boxText">

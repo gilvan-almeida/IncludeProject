@@ -1,6 +1,7 @@
 import React from "react";
 import './Style.css'
-function CardReview() {
+import BoxNota from "../BoxNota/BoxNota";
+function CardReview({date, titulo, nota, descricao, autor}) {
     return (
         <div className="boxReview">
             <div className="boxDadosReview">
@@ -10,29 +11,26 @@ function CardReview() {
 
                 <div className="boxNoteReview">
                     <div className="boxNote">
-                        <h3>
-                            83
-                        </h3>
+                        <BoxNota
+                            nota={nota}
+                        />
                     </div>
                     <div className="boxTitleNote">
                         <h3 className="note">
-                            TITULO
+                            {titulo}
                         </h3>
                     </div>
                 </div>
 
                 <div className="boxTextReview">
                     <p>
-                        kjfbslkrbgvçizbefizbliçfbkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçozliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\ç
-                        kjfbslkrbgvçizbefizbliçfbkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçozliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\ç
-                        kjfbslkrbgvçizbefizbliçfbkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçozliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\ç
-                        kjfbslkrbgvçizbefizbliçfbkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçokjfbslkrbgvçizbefizbliçfbzliebvçilzosebfçozliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\çkjfbslkrbgvçizbefizbliçfbzliebvçilzosebfço\bçfb\ç k\wbfih\bçfiyb\ç
+                        {descricao}
                     </p>
                 </div>
                 <div className="boxUserReview">
                     <div className="boxUser">
-                        <h3>
-                            WANDALLIS
+                        <h3 style={{margin:"5px"}}>
+                            Autor: {autor}
                         </h3>
                     </div>
                 </div>

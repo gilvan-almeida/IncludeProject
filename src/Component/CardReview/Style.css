@@ -20,6 +20,7 @@
 }
 .note{
     color: white;
+    font-family: 'Roboto', sans-serif; 
 }
 .boxDadosReview{
     padding: 5px;
@@ -27,6 +28,7 @@
 }
 .boxDateReview{
     color: white;
+    font-family: 'Roboto', sans-serif; 
 }
 .boxTitleNote{
     color: white;
@@ -47,12 +49,11 @@
     align-items: center;
     font-weight: bold;
     font-size: 24px;
-    background-color: red;
     font-family: 'Roboto', sans-serif;
 }
 .boxTextReview {
     font-family: 'Roboto', sans-serif; 
-    max-width: 90%;
+
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -63,4 +64,6 @@
 .boxUser{
     color: white;
     font-family: 'Roboto', sans-serif; 
+    margin-top: 10px;
+    border-top: 1px solid red;
 }
