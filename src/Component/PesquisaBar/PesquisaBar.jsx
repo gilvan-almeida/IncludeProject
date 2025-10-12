@@ -1,5 +1,4 @@
 import React from "react";
-import lupa from '../../assets/lupa.png';   
 import { FaSearch } from "react-icons/fa";
 import './Style.css';
 

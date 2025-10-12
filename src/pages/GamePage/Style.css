@@ -1,0 +1,101 @@
+.boxContainerMain {
+    width: 100%;
+    display: flex;
+    justify-content: center; 
+}
+
+.boxGame {
+    display: flex;
+    max-width: 1200px;
+    width: 100%;        
+    margin: 0px;    
+    background-color: rgb(59, 58, 58);
+    border-radius: 15px;
+    margin-top: 15px;
+}
+
+.boxVideo {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    max-height: auto;
+    overflow: hidden;
+}
+
+.boxVideo video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block; 
+}
+.boxTitleGame {
+    flex: 1;
+    border-bottom: 1px white solid;
+}
+.boxVideosSumary{
+    flex: 2;
+}
+.dadosTitleGame{
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.titleGameReview{
+    font-family: 'Roboto', sans-serif; 
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    margin: 0px;
+    margin: 20px 0px;
+}
+.boxPlataforms{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+.dateGame{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.textLacamento{
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    font-size: 15px;
+}
+.textLacamentoP{
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+.boxNotaGame{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+}
+.boxNotaGame{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: rgb(85, 84, 84);
+    border-radius: 15px;
+
+}
+.dadosNota p{
+    margin: 0px;
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+}
+
+.notaMist{
+    font-size: 15px;
+    font-weight: 100;
+}
+.titleNotaSite{
+    font-size: 18px;
+    font-weight: 100;
+}
