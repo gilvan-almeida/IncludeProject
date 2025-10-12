@@ -8,9 +8,9 @@ import NavBar from "../../Component/NavBar/NavBar";
 
 function Home() {
     const jogos = [
-        { title: "Mafia", description: "Ação e mistério", image: imgGame, platform: ["pc", "playstation"] },
-        { title: "Cyber Drift", description: "Corridas futuristas", image: imgGame, platform: ["xbox", "pc"] },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
+        { title: "Mafia", description: "Ação e mistério", image: imgGame, platform: ["pc", "playstation"], nota: 65 },
+        { title: "Cyber Drift", description: "Corridas futuristas", image: imgGame, platform: ["xbox", "pc"], nota: 13 },
+        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"], nota: 100 },
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
@@ -72,6 +72,7 @@ function Home() {
                                 description={jogo.description}
                                 plataform={jogo.platform}
                                 img={jogo.image}
+                                nota={jogo.nota}
                             />
 
                         ))}

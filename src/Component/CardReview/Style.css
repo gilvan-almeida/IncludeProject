@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+.boxReview {
+    width: 100%;
+    max-width: 550px;  
+    max-height: 350px;  
+    min-height: 200px;    
+    background-color: rgb(80, 79, 79);
+    border-radius: 15px;
+    box-sizing: border-box;
+    padding: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.boxReview:hover{
+    transform: scale(1.05);
+}
+.boxNoteReview{
+    display: flex;
+    gap: 20px;
+    color: white;
+}
+.note{
+    color: white;
+}
+.boxDadosReview{
+    padding: 5px;
+    margin-left: 15px;
+}
+.boxDateReview{
+    color: white;
+}
+.boxTitleNote{
+    color: white;
+}
+.boxTextReview{
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+}
+.boxNote{
+    color: white;
+    padding: 25px;
+    margin: 0px;
+    height: 1px;
+    width: 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    background-color: red;
+    font-family: 'Roboto', sans-serif;
+}
+.boxTextReview {
+    font-family: 'Roboto', sans-serif; 
+    max-width: 90%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5; 
+    -webkit-box-orient: vertical; 
+    white-space: normal;
+}
+.boxUser{
+    color: white;
+    font-family: 'Roboto', sans-serif; 
+}

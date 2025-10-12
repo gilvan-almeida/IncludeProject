@@ -70,3 +70,24 @@
 .boxButton {
     text-align: end;
 }
+
+.boxNota{
+    color: white;
+    padding: 25px;
+    margin: 0px;
+    height: 1px;
+    width: 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 24px;
+    font-family: 'Roboto', sans-serif;
+}
+.boxTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 15px;
+}
