@@ -12,6 +12,7 @@
     background-color: rgb(59, 58, 58);
     border-radius: 15px;
     margin-top: 15px;
+    overflow: hidden;
 }
 
 .boxVideo {
@@ -26,12 +27,15 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 10px;
-    display: block; 
+    display: block;
+    border-radius: 15px;
+}
+.boxTitleGameInfo{
+    border-bottom: 1px white solid;
 }
 .boxTitleGame {
     flex: 1;
-    border-bottom: 1px white solid;
+
 }
 .boxVideosSumary{
     flex: 2;
@@ -95,7 +99,37 @@
     font-size: 15px;
     font-weight: 100;
 }
-.titleNotaSite{
-    font-size: 18px;
-    font-weight: 100;
+.boxInforGame{
+    display: flex;
 }
+.linha1, .linha2 {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; 
+    margin-top: 10px;
+}
+.linha1 > div,
+.linha2 > div {
+    flex: 1;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.linha1 p,
+.linha2 p {
+    margin: 2px 0;
+    font-size: 14px;
+}
+/* .SumaryTitle{
+    font-family: 'Roboto', sans-serif;
+    font-weight: bolder;
+    color: white;
+    margin: 0px;
+    margin: 10px 0px;
+    font-size: 35px;
+}
+.SumaryNotes > div > div {
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 15px;
+    line-height: 1.6;   
+} */

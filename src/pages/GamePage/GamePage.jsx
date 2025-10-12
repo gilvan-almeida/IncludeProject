@@ -20,23 +20,12 @@ function GamePage() {
                                 autoPlay
                                 muted
                             />
-                        </div>
-                        {/*                         
-                        <div className="SumaryNotes">
-                            <div>
-                                <p>
-                                    Criticas e Reviews
-                                </p>
-                                <div>
-
-                                </div>
-                            </div>
-                        </div> */}
+                        </div>                     
                     </div>
 
                     <div className="boxTitleGame">
                         <div className="dadosTitleGame">
-                            <div className="boxTitleGame">
+                            <div className="boxTitleGameInfo">
                                 <p className="titleGameReview">
                                     MAFIA
                                 </p>
@@ -55,7 +44,7 @@ function GamePage() {
                                     </p>
                                 </div>
                             </div>
-                            <div className="boxNotaGame">
+                            {/* <div className="boxNotaGame">
                                 <div className="dadosNota">
                                     <p className="titleNotaSite">
                                         NOTA MEDIA DO SITE
@@ -65,17 +54,44 @@ function GamePage() {
                                     </p>
                                 </div>
                                 <BoxNota />
-                            </div>
-                            <div className="boxNotaGame">
-                                <div className="dadosNota">
-                                    <p className="titleNotaSite">
-                                        NOTA DOS USUARIOS
-                                    </p>
-                                    <p className="notaMist">
-                                        Notas Misturadas
-                                    </p>
+                            </div> */}
+                            <div>
+                                <div className="linha1">
+                                    <div className="boxPlata">
+                                        <p>
+                                            Plataformas:
+                                        </p>
+                                        <p>
+                                            PC , PlayStation 5 , Xbox Series S/X , Xbox One , PlayStation 4
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Desenvolvedor:
+                                        </p>
+                                        <p>
+                                            Laboratórios Hardsuit
+                                        </p>
+                                    </div>
                                 </div>
-                                <BoxNota />
+                                <div className="linha2">
+                                    <div>
+                                        <p>
+                                            Gênero:
+                                        </p>
+                                        <p>
+                                            Ação , RPG
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <p>
+                                            Classificação etária:
+                                        </p>
+                                        <p>
+                                            Não classificado
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
