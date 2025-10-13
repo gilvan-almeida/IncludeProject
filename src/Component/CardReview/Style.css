@@ -53,7 +53,6 @@
 }
 .boxTextReview {
     font-family: 'Roboto', sans-serif; 
-
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -65,5 +64,5 @@
     color: white;
     font-family: 'Roboto', sans-serif; 
     margin-top: 10px;
-    border-top: 1px solid red;
+    border-top: 1px solid white;
 }

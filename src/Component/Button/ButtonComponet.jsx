@@ -1,8 +1,9 @@
 import React from "react";
 import './Style.css'
-function ButtonComponent({title, color, height, width}){
+function ButtonComponent({title, color, height, width, onClick}){
     return(
         <div className="boxButton" 
+            onClick={onClick}
             style={{
                 height:height, 
                 width:width, 

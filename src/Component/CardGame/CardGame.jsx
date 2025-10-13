@@ -6,6 +6,12 @@ import "./Style.css";
 
 
 function CardGame({ title, plataform = [], description, img, date, nota}) {
+
+
+
+
+
+
   return (
     <div className="boxCard">
       <div className="imgBox">

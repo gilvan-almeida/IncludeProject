@@ -8,10 +8,10 @@ import './Style.css';
 
 function GamePage() {
     return (
-        <div>
+        <div className="MainPage">
             <NavBar />
-
             <div className="boxContainerMain">
+
                 <div className="boxGame">
                     <div className="boxVideosSumary">
                         <div className="boxVideo">
@@ -20,7 +20,7 @@ function GamePage() {
                                 autoPlay
                                 muted
                             />
-                        </div>                     
+                        </div>
                     </div>
 
                     <div className="boxTitleGame">
@@ -44,17 +44,6 @@ function GamePage() {
                                     </p>
                                 </div>
                             </div>
-                            {/* <div className="boxNotaGame">
-                                <div className="dadosNota">
-                                    <p className="titleNotaSite">
-                                        NOTA MEDIA DO SITE
-                                    </p>
-                                    <p className="notaMist">
-                                        Notas Misturadas
-                                    </p>
-                                </div>
-                                <BoxNota />
-                            </div> */}
                             <div>
                                 <div className="linha1">
                                     <div className="boxPlata">
@@ -94,16 +83,14 @@ function GamePage() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
-
-
-
                 </div>
             </div>
 
+            <div>
+                <CardReview />
+            </div>
+            
         </div>
     )
 }

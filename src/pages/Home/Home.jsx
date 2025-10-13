@@ -7,6 +7,7 @@ import Footer from "../../Component/Footer/Footer";
 import NavBar from "../../Component/NavBar/NavBar";
 
 function Home() {
+
     const jogos = [
         { title: "Mafia", description: "Ação e mistério", image: imgGame, platform: ["pc", "playstation"], nota: 65 },
         { title: "Cyber Drift", description: "Corridas futuristas", image: imgGame, platform: ["xbox", "pc"], nota: 13 },
@@ -23,8 +24,8 @@ function Home() {
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] },
         { title: "Elder Forest", description: "Exploração mágica", image: imgGame, platform: ["playstation"] }
-
     ];
+
     const opcoesPlataforma = [
         { value: "", label: "Selecione uma plataforma" },
         { value: "pc", label: "PC" },
@@ -74,7 +75,6 @@ function Home() {
                                 img={jogo.image}
                                 nota={jogo.nota}
                             />
-
                         ))}
                     </div>
 
