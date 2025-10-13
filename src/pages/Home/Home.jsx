@@ -1,40 +1,47 @@
 import React from "react";
+import { useEffect, useState } from "react";
+import { getGames } from "../../Service/getGames";
 import CardGame from "../../Component/CardGame/CardGame";
 import imgGame from "../../assets/gtaImg.jpg"
 import "./Style.css";
-import Select from "../../Component/Select/Select";
 import Footer from "../../Component/Footer/Footer";
 import NavBar from "../../Component/NavBar/NavBar";
-import { NavigateDades } from "../../utils/NavigateDades";
+
 
 function Home() {
 
-    const jogos = [
-        { title: "Mafia", description: "Ação e mistério", image: imgGame, plataform: ["pc", "playstation"], nota: 65 },
-        { title: "Cyber Drift", description: "Corridas futuristas", image: imgGame, plataform: ["xbox", "pc"], nota: 13 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 100 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 39 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65},
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 88 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65},
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 95 },
-        { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 }
-    ];
+    const [jogos, setJogos] = useState([]);
 
-    const opcoesPlataforma = [
-        { value: "", label: "Selecione uma plataforma" },
-        { value: "pc", label: "PC" },
-        { value: "playstation", label: "PlayStation" },
-        { value: "xbox", label: "Xbox" },
-        { value: "switch", label: "Nintendo Switch" },
-    ];
+    useEffect(() => {
+        const getDadosGames = async () =>{
+            try {
+                const dados = await getGames();
+                if(dados) setJogos(dados.results);
+                console.log(dados.results[0]);
+            } catch (error) {
+                console.error("Error: ", error)
+            }
+        };
+        getDadosGames();
+    },[]);
 
+    // const jogos = [
+    //     { title: "Mafia", description: "Ação e mistério", image: imgGame, plataform: ["pc", "playstation"], nota: 65 },
+    //     { title: "Cyber Drift", description: "Corridas futuristas", image: imgGame, plataform: ["xbox", "pc"], nota: 13 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 100 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 27 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 39 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65},
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 88 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65},
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 95 },
+    //     { title: "Elder Forest", description: "Exploração mágica", image: imgGame, plataform: ["playstation"], nota: 65 }
+    // ];
 
     return (
         <div className="containerHome">
@@ -53,30 +60,17 @@ function Home() {
 
                     </div>
 
-                    {/* <div className="selectBox">
-                        <Select
-                            label="Plataforma:"
-                            options={opcoesPlataforma}
-
-                            onChange={onchange}
-                        />
-                        <Select
-                            label="Plataforma:"
-                            options={opcoesPlataforma}
-
-                            onChange={onchange}
-                        />
-                    </div> */}
 
                     <div className="cardsContainer">
                         {jogos.map((jogo, index) => (
                             <CardGame
-                                key={index}
-                                title={jogo.title}
+                                key={jogo.key}
+                                title={jogo.name}
                                 description={jogo.description}
-                                plataform={jogo.plataform}
-                                img={jogo.image}
-                                nota={jogo.nota}
+                                plataform={jogo.platforms}
+                                img={jogo.background_image}
+                                date={jogo.release}
+                                nota={jogo.metacritic}
                             />
                         ))}
                     </div>
