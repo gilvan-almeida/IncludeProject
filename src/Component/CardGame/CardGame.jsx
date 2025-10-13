@@ -1,15 +1,25 @@
 import React from "react";
 import ButtonComponent from "../Button/ButtonComponet";
 import BoxNota from "../BoxNota/BoxNota";
+import { NavigateDades } from "../../utils/NavigateDades";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import "./Style.css";
 
 
-function CardGame({ title, plataform = [], description, img, date, nota}) {
+function CardGame({ key, title, plataform = [], description, img, date, nota}) {
 
 
-
-
+  const { openPageDades } = NavigateDades();
+  const handleOpenDetails = () => {
+  openPageDades("/GamePage", {
+      key,
+      title,
+      plataform,
+      description,
+      img,
+      nota,
+      });
+    };
 
 
   return (
@@ -31,7 +41,6 @@ function CardGame({ title, plataform = [], description, img, date, nota}) {
         <BoxNota
           nota={nota}
         />
-        {/* <h3 className="boxNota" style={{backgroundColor: colorNote(nota)}}>{nota}</h3> */}
       </div>
 
       <div className="boxText">
@@ -42,7 +51,7 @@ function CardGame({ title, plataform = [], description, img, date, nota}) {
       <div className="extraInfo">
         <p>Lançamento: {date}</p>
         <div className="boxButton">
-          <ButtonComponent height={35} width={100} title={"Detalhes"} />
+          <ButtonComponent height={35} width={100} title={"Detalhes"} onClick={handleOpenDetails}/>
         </div>
       </div>
     </div>

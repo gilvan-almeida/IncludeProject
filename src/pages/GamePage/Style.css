@@ -20,6 +20,7 @@
     overflow: hidden;
     margin-left: 5px;
     margin-right: 5px;
+    gap: 10px;
 }
 
 .boxVideo {
@@ -35,7 +36,8 @@
     height: 100%;
     object-fit: cover;
     display: block;
-    border-radius: 15px;
+    border-radius: 20px;
+    padding: 5px;
 }
 .boxTitleGameInfo{
     border-bottom: 1px white solid;
@@ -141,6 +143,16 @@
     font-family: 'Roboto', sans-serif;
     font-size: 24px;
     font-weight: bold;
+    border-bottom: 1px white solid;
+}
+.previewImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    padding: 5px;
+
 }
 
 .cardsRow {
