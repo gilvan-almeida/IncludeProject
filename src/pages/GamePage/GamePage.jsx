@@ -4,93 +4,103 @@ import BoxNota from "../../Component/BoxNota/BoxNota";
 import CardReview from "../../Component/CardReview/CardReview";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
+import Footer from "../../Component/Footer/Footer";
 import './Style.css';
 
 function GamePage() {
     return (
         <div className="MainPage">
             <NavBar />
-            <div className="boxContainerMain">
+            <div className="contetPage">
 
-                <div className="boxGame">
-                    <div className="boxVideosSumary">
-                        <div className="boxVideo">
-                            <video
-                                src="https://media.rawg.io/media/stories/b3b/b3b872ae7c4e95cfd6d999b2bda384e8.mp4"
-                                autoPlay
-                                muted
-                            />
-                        </div>
-                    </div>
-
-                    <div className="boxTitleGame">
-                        <div className="dadosTitleGame">
-                            <div className="boxTitleGameInfo">
-                                <p className="titleGameReview">
-                                    MAFIA
-                                </p>
-                                <div className="boxPlataforms">
-                                    <FaPlaystation size={30} />
-                                    <FaWindows size={25} />
-                                    <FaXbox size={25} />
-                                    <BsNintendoSwitch size={25} />
-                                </div>
-                                <div className="dateGame">
-                                    <p className="textLacamentoP">
-                                        Lançamento:
-                                    </p>
-                                    <p className="textLacamento">
-                                        27 DE OUTUBRO
-                                    </p>
-                                </div>
+                <div className="boxContainerMain">
+                    <div className="boxGame">
+                        <div className="boxVideosSumary">
+                            <div className="boxVideo">
+                                <video
+                                    src="https://media.rawg.io/media/stories/b3b/b3b872ae7c4e95cfd6d999b2bda384e8.mp4"
+                                    autoPlay
+                                    muted
+                                />
                             </div>
-                            <div>
-                                <div className="linha1">
-                                    <div className="boxPlata">
-                                        <p>
-                                            Plataformas:
-                                        </p>
-                                        <p>
-                                            PC , PlayStation 5 , Xbox Series S/X , Xbox One , PlayStation 4
-                                        </p>
+                        </div>
+
+                        <div className="boxTitleGame">
+                            <div className="dadosTitleGame">
+                                <div className="boxTitleGameInfo">
+                                    <p className="titleGameReview">
+                                        MAFIA
+                                    </p>
+                                    <div className="boxPlataforms">
+                                        <FaPlaystation size={30} />
+                                        <FaWindows size={25} />
+                                        <FaXbox size={25} />
+                                        <BsNintendoSwitch size={25} />
                                     </div>
-                                    <div>
-                                        <p>
-                                            Desenvolvedor:
+                                    <div className="dateGame">
+                                        <p className="textLacamentoP">
+                                            Lançamento:
                                         </p>
-                                        <p>
-                                            Laboratórios Hardsuit
+                                        <p className="textLacamento">
+                                            27 DE OUTUBRO
                                         </p>
                                     </div>
                                 </div>
-                                <div className="linha2">
-                                    <div>
-                                        <p>
-                                            Gênero:
-                                        </p>
-                                        <p>
-                                            Ação , RPG
-                                        </p>
+                                <div>
+                                    <div className="linha1">
+                                        <div className="boxPlata">
+                                            <p>
+                                                Plataformas:
+                                            </p>
+                                            <p>
+                                                PC , PlayStation 5 , Xbox Series S/X , Xbox One , PlayStation 4
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Desenvolvedor:
+                                            </p>
+                                            <p>
+                                                Laboratórios Hardsuit
+                                            </p>
+                                        </div>
                                     </div>
-                                    <div>
-                                        <p>
-                                            Classificação etária:
-                                        </p>
-                                        <p>
-                                            Não classificado
-                                        </p>
+                                    <div className="linha2">
+                                        <div>
+                                            <p>
+                                                Gênero:
+                                            </p>
+                                            <p>
+                                                Ação , RPG
+                                            </p>
+                                        </div>
+                                        <div>
+                                            <p>
+                                                Classificação etária:
+                                            </p>
+                                            <p>
+                                                Não classificado
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div>
-                <CardReview />
+                <div className="boxContainerMain">
+                    <div className="reviewSection">
+                        <p className="titleReviews">Reviews</p>
+                        <div className="cardsRow">
+                            <CardReview />
+                            <CardReview />
+                        </div>
+                    </div>
+                </div>
+                
             </div>
-            
+            <Footer/>
         </div>
     )
 }

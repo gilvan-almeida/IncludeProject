@@ -1,9 +1,14 @@
 .boxContainerMain {
     width: 100%;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
 }
-
+.pageContent {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  
+}
 .boxGame {
     display: flex;
     max-width: 1200px;
@@ -121,17 +126,25 @@
     margin: 2px 0;
     font-size: 14px;
 }
-/* .SumaryTitle{
-    font-family: 'Roboto', sans-serif;
-    font-weight: bolder;
-    color: white;
-    margin: 0px;
-    margin: 10px 0px;
-    font-size: 35px;
+.reviewSection {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;  
+    margin-top: 20px;
 }
-.SumaryNotes > div > div {
-    font-family: 'Roboto', sans-serif;
+.titleReviews {
+    align-self: flex-start; 
     color: white;
-    font-size: 15px;
-    line-height: 1.6;   
-} */
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.cardsRow {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;                    
+}

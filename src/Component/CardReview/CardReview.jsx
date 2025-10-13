@@ -24,7 +24,8 @@ function CardReview({date, titulo, nota, descricao, autor}) {
 
                 <div className="boxTextReview">
                     <p>
-                        {descricao}
+                        {/* {descricao} */}
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quis, pariatur eligendi numquam reiciendis ipsam rem nesciunt nemo quod explicabo itaque ex impedit excepturi adipisci praesentium obcaecati dolores quasi libero.
                     </p>
                 </div>
                 <div className="boxUserReview">
