@@ -12,7 +12,9 @@ import NavBar from "../../Component/NavBar/NavBar";
 function Home() {
 
     const [jogos, setJogos] = useState([]);
+    
     const [busca, setBusca] = useState("");
+
     const [loading, setLoading] = useState(true);
 
 
@@ -78,7 +80,7 @@ function Home() {
                 )}
             </div>
             <div>
-                            <Footer/>
+                <Footer/>
             </div>
 
         </div>

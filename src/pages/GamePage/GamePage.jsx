@@ -5,7 +5,7 @@ import CardReview from "../../Component/CardReview/CardReview";
 import ButtonComponent from "../../Component/Button/ButtonComponet";
 import { useNavigate } from "react-router-dom";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
-
+import Modal from "../../Component/Modal/Modal";
 import { BsNintendoSwitch } from "react-icons/bs";
 import AlertBox from "../../Component/AlertBox/AlertBox";
 import { BsArrowLeft } from "react-icons/bs";
@@ -22,6 +22,7 @@ function GamePage() {
     const { id } = location.state;
     const [jogo, setJogo] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
     // PROBLEMA QUE SEMPRE Q A PAGINA ATUALIZA OU SAI E VOLTA ELE FAZ A REQUISIÇÃO DENOVO AI DEMORA , PROVAVELMENTE DEVE TER UM JEITO MAIS FACIL DE FAZER , MAS JA É 00:30
     useEffect(() => {
@@ -149,33 +150,18 @@ function GamePage() {
                                 <div className="boxButtonsGameContainer">
                                     <p className="textLacamentoP">Onde comprar:</p>
                                     <div className="boxButtonsGame">
-                                        {jogo.stores?.map((itemStore, index)=>{
+                                        {jogo.stores?.slice(0, 2).map((itemStore, index) => {
                                             let icon;
                                             let name = itemStore.store.name;
                                             switch (itemStore.store.slug) {
-                                                case "steam":
-                                                    icon = <FaWindows />;
-                                                    break;
                                                 case "playstation-store":
                                                     icon = <FaPlaystation />;
                                                     break;
                                                 case "xbox-store":
-                                                case "microsoft-store":
-                                                    icon = <FaXbox />;
-                                                    break;
-                                                case "epic-games":
-                                                   
-                                                    break;
-                                                case "xbox360":
-                                                    icon = <BsNintendoSwitch />;
-                                                    break;
-                                                case "nintendo-eshop":
-                                                    icon = <BsNintendoSwitch />;
-                                                    break;
                                                 default:
                                                     icon = null;
                                             }
-                                            return(
+                                            return (
                                                 <ButtonComponent
                                                     title={<>{icon} {name}</>}
                                                     color="#2d2d2d"
@@ -186,6 +172,24 @@ function GamePage() {
                                             )
                                         })}
                                     </div>
+                                    <div className="fullWidthButton">
+                                        <ButtonComponent
+                                            title="Ver todas"
+                                            color="#2d2d2d"
+                                            height="50px"
+                                            width="100%"
+                                            onClick={() => setIsModalOpen(true)}
+                                        />
+                                    </div>
+
+                                    <div className="NotaBoxUser">
+                                        <div>
+                                            <h2>
+                                                Nota
+                                            </h2>
+                                        </div>
+                                    </div>
+                                    
                                 </div>
                             </div>
                         </div>
@@ -204,6 +208,25 @@ function GamePage() {
 
                 </div>
             )}
+            <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+                <h2>Onde comprar</h2>
+                {jogo?.stores?.length > 0 ? (
+                    jogo.stores.map((itemStore, index) => (
+                        <ButtonComponent
+                            key={index}
+                            title={itemStore.store.name}
+                            color="#2d2d2d"
+                            height="50px"
+                            width="100%"
+                            onClick={() =>
+                                window.open(`https://${itemStore.store.domain}`, "_blank")
+                            }
+                        />
+                    ))
+                ) : (
+                    <p>Nenhuma loja disponível.</p>
+                )}
+            </Modal>
             <Footer />
         </div>
     )

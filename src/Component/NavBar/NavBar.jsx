@@ -24,7 +24,7 @@ function NavBar({ busca, setBusca }){
             </div>
             
             <div className="boxLinks">
-                <Link to={"/GamePage"}>Inicio</Link>
+                <Link to={"/"}>Inicio</Link>
 
                 <Link>Login</Link>
             </div>

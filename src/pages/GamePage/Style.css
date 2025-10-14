@@ -3,6 +3,7 @@
     display: flex;
     justify-content: center;
 }
+
 .pageContent {
   display: flex;
   flex-direction: column; 
@@ -216,13 +217,17 @@
     width: 100%;
 }
 .boxButtonsGame {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 15px;
-    margin-top: 20px;
-    justify-items: center;
-
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); 
+  gap: 15px;
+  margin-top: 20px;
 }
+
+.fullWidthButton {
+  margin-top: 15px;
+  width: 100%;
+}
+
 
 .boxButton {
     display: flex;
@@ -232,6 +237,8 @@
     border-radius: 10px;
     cursor: pointer;
     transition: transform 0.2s ease, opacity 0.3s;
+    font-family: 'Roboto', sans-serif; 
+
 }
 
 .boxButton:hover {
@@ -246,4 +253,12 @@
     display: flex;
     align-items: center;
     gap: 6px;
+}
+.NotaBoxUser{
+    background-color: #2d2d2d;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    border-radius: 15px;
 }
