@@ -44,13 +44,22 @@
 }
 .boxTitleGame {
     flex: 1;
-
 }
-.BoxSobre > p{
+.titleSobre{
+    font-size: 30px;
+    font-weight: bold;
     margin: 0px;
-    padding: 10px;
+}
+.textSobre{
+    font-size: 15px;
+}
+.BoxSobre {
+    margin: 0px;
+    padding:5px;
     font-family: 'Roboto', sans-serif; 
     color: white;
+    margin-left: 10px;
+    margin-bottom: 5px;
 }
 .boxVideosSumary{
     flex: 2;
@@ -157,7 +166,7 @@
     object-fit: cover;
     display: block;
     border-radius: 20px;
-    padding: 5px;
+    padding: 8px;
 
 }
 
@@ -192,4 +201,49 @@
 
 .btnVoltar:hover {
     background-color: #444;
+}
+.boxButtonsGameContainer{
+    margin-top: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    border-top: 1px solid white;
+}
+.titleBuy {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #fff; 
+    margin-bottom: 10px;
+    width: 100%;
+}
+.boxButtonsGame {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 15px;
+    margin-top: 20px;
+    justify-items: center;
+
+}
+
+.boxButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, opacity 0.3s;
+}
+
+.boxButton:hover {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.textButton {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
 }

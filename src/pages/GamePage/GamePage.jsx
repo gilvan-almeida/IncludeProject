@@ -2,8 +2,10 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../Component/NavBar/NavBar";
 import BoxNota from "../../Component/BoxNota/BoxNota";
 import CardReview from "../../Component/CardReview/CardReview";
+import ButtonComponent from "../../Component/Button/ButtonComponet";
 import { useNavigate } from "react-router-dom";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
+
 import { BsNintendoSwitch } from "react-icons/bs";
 import AlertBox from "../../Component/AlertBox/AlertBox";
 import { BsArrowLeft } from "react-icons/bs";
@@ -21,6 +23,7 @@ function GamePage() {
     const [jogo, setJogo] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    // PROBLEMA QUE SEMPRE Q A PAGINA ATUALIZA OU SAI E VOLTA ELE FAZ A REQUISIÇÃO DENOVO AI DEMORA , PROVAVELMENTE DEVE TER UM JEITO MAIS FACIL DE FAZER , MAS JA É 00:30
     useEffect(() => {
         const getDadesDetailsGame = async () => {
             try {
@@ -59,6 +62,7 @@ function GamePage() {
                         <div className="boxGame">
                             <div className="boxVideosSumary">
                                 <div className="boxVideo">
+                                    {/* AQUI A INTEÇÃO ERA COLOCAR O VIDEO DA API MAS, ERA OUTRA REQUISIÇÃO PARA PEGAR MAIS DETALHES DO JOGO ENTAO FICOU A IMAGEM MESMO */}
                                     {/* <video
                                     src="https://media.rawg.io/media/stories/b3b/b3b872ae7c4e95cfd6d999b2bda384e8.mp4"
                                     autoPlay
@@ -70,10 +74,10 @@ function GamePage() {
                                         className="previewImage"
                                     />
                                     <div className="BoxSobre">
-                                        <p>
-                                            ola penis
+                                        <p className="titleSobre">
+                                            Sobre:
                                         </p>
-                                        <p>
+                                        <p className="textSobre">
                                             {jogo.description_raw}
                                         </p>
                                     </div>
@@ -140,6 +144,47 @@ function GamePage() {
                                                 </p>
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                                <div className="boxButtonsGameContainer">
+                                    <p className="textLacamentoP">Onde comprar:</p>
+                                    <div className="boxButtonsGame">
+                                        {jogo.stores?.map((itemStore, index)=>{
+                                            let icon;
+                                            let name = itemStore.store.name;
+                                            switch (itemStore.store.slug) {
+                                                case "steam":
+                                                    icon = <FaWindows />;
+                                                    break;
+                                                case "playstation-store":
+                                                    icon = <FaPlaystation />;
+                                                    break;
+                                                case "xbox-store":
+                                                case "microsoft-store":
+                                                    icon = <FaXbox />;
+                                                    break;
+                                                case "epic-games":
+                                                   
+                                                    break;
+                                                case "xbox360":
+                                                    icon = <BsNintendoSwitch />;
+                                                    break;
+                                                case "nintendo-eshop":
+                                                    icon = <BsNintendoSwitch />;
+                                                    break;
+                                                default:
+                                                    icon = null;
+                                            }
+                                            return(
+                                                <ButtonComponent
+                                                    title={<>{icon} {name}</>}
+                                                    color="#2d2d2d"
+                                                    height="50px"
+                                                    width="100%"
+                                                    onClick={() => window.open(`https://${itemStore.store.domain}`, "_blank")}
+                                                />
+                                            )
+                                        })}
                                     </div>
                                 </div>
                             </div>
