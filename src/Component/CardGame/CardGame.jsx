@@ -3,22 +3,16 @@ import ButtonComponent from "../Button/ButtonComponet";
 import BoxNota from "../BoxNota/BoxNota";
 import { NavigateDades } from "../../utils/NavigateDades";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
+import FormatDate from "../../utils/FormatDate";
 import "./Style.css";
 
 
-function CardGame({ key, title, plataform = [], description, img, date, nota}) {
+function CardGame({ key, title, plataform = [], generes, img, date, nota, jogo}) {
 
 
   const { openPageDades } = NavigateDades();
   const handleOpenDetails = () => {
-  openPageDades("/GamePage", {
-      key,
-      title,
-      plataform,
-      description,
-      img,
-      nota,
-      });
+  openPageDades("/GamePage", {id: jogo.id});
     };
 
 
@@ -30,9 +24,9 @@ function CardGame({ key, title, plataform = [], description, img, date, nota}) {
       <div className="boxTop">
         <div className="boxTopTitle">
           <div className="iconsBox">
-            {plataform.includes("xbox") && (<FaXbox size={20} />)}
-            {plataform.includes("playstation") && (<FaPlaystation size={24} />)}
-            {plataform.includes("pc") && (<FaWindows size={20} />)}
+            {plataform.includes("Xbox") && (<FaXbox size={20} />)}
+            {plataform.includes("PlayStation") && (<FaPlaystation size={24} />)}
+            {plataform.includes("PC") && (<FaWindows size={20} />)}
           </div>
           <div className="boxText">
             <h3 className="titleBox">{title}</h3>
@@ -45,13 +39,14 @@ function CardGame({ key, title, plataform = [], description, img, date, nota}) {
 
       <div className="boxText">
         <p className="descBox">
-          {description}
+          Gênero:<br/>
+          {generes}
         </p>
       </div>
       <div className="extraInfo">
-        <p>Lançamento: {date}</p>
+        <p>Lançamento: {FormatDate(date)}</p>
         <div className="boxButton">
-          <ButtonComponent height={35} width={100} title={"Detalhes"} onClick={handleOpenDetails}/>
+          <ButtonComponent height={35} width={100} title={"Detalhes"} onClick={() => handleOpenDetails()}/>
         </div>
       </div>
     </div>

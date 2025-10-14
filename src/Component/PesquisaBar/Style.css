@@ -33,7 +33,11 @@
 .boxPesquisa:hover .inputPesquisa {
     background-color: white;
 }
-
+.boxPesquisa:hover .inputPesquisa,
+.inputPesquisa:focus {
+    background-color: white;
+    color: black;
+}
 
 .iconPesquisa {
     position: absolute;

@@ -5,7 +5,7 @@ import PesquisaBar from "../PesquisaBar/PesquisaBar";
 import AppRoutes from "../../routes/AppRoute";
 import { IoGameController } from "react-icons/io5";
 
-function NavBar(){
+function NavBar({ busca, setBusca }){
     return(
         <div className="boxNavbar">
 
@@ -17,7 +17,10 @@ function NavBar(){
             </div>
 
             <div className="boxPesquisa">
-                <PesquisaBar/>
+                <PesquisaBar
+                    busca={busca} 
+                    setBusca={setBusca}
+                />
             </div>
             
             <div className="boxLinks">

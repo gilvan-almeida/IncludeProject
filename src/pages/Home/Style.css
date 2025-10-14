@@ -12,11 +12,6 @@ html, body, #root {
     margin-bottom: 15px;
 }
 
-/* .containerHome {
-    background-color: black;
-    height: 100%;
-    width: 100%;
-}  */
 
 .titleMain{
     margin: 0px;
@@ -40,9 +35,18 @@ html, body, #root {
     justify-content: center;
     gap: 20px;
 }
-.aligBoxMain{
+.containerHome {
     display: grid;
-    place-items: center;
+    grid-template-rows: 1fr auto; 
+    min-height: 100vh;
+}
+
+.aligBoxMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; 
+    align-items: center;
+    padding-top: 20px;
 }
 .boxMain{
     width: 85%;
