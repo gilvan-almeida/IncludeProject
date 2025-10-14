@@ -1,54 +1,63 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-html, body, #root {
+html,
+body,
+#root {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: black;
 }
+
+.containerHome {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.aligBoxMain {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.boxMain {
+    width: 85%;
+}
+
+
 .boxTextTitle {
     margin: 0px;
-    margin-top: 15px;
     margin-bottom: 15px;
+    text-align: left;
 }
 
-
-.titleMain{
+.titleMain {
     margin: 0px;
-    color: black;
-    font-family: 'Roboto', sans-serif; 
+    color: white;
+    font-family: 'Roboto', sans-serif;
     font-weight: bold;
     font-size: 40px;
-    color: white;
 }
-.subTitle{
+
+.subTitle {
     margin: 0px;
-    padding: 0px;
-    color: black;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     font-size: 20px;
     color: white;
 }
+
+
 .cardsContainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
 }
-.containerHome {
-    display: grid;
-    grid-template-rows: 1fr auto; 
-    min-height: 100vh;
-}
 
-.aligBoxMain {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; 
-    align-items: center;
-    padding-top: 20px;
+.boxFooter {
+    max-height: 100px;
 }
-.boxMain{
-    width: 85%;
-}
-
