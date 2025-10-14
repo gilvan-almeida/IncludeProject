@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../Component/NavBar/NavBar";
 import BoxNota from "../../Component/BoxNota/BoxNota";
 import CardReview from "../../Component/CardReview/CardReview";
+import { useNavigate } from "react-router-dom";
 import { FaPlaystation, FaXbox, FaWindows } from "react-icons/fa";
 import { BsNintendoSwitch } from "react-icons/bs";
 import AlertBox from "../../Component/AlertBox/AlertBox";
+import { BsArrowLeft } from "react-icons/bs";
 import { useLocation } from "react-router-dom";
 import Footer from "../../Component/Footer/Footer";
 import FormatDate from "../../utils/FormatDate";
@@ -14,6 +16,7 @@ import './Style.css';
 function GamePage() {
 
     const location = useLocation();
+    const navigate = useNavigate();
     const { id } = location.state;
     const [jogo, setJogo] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -43,6 +46,12 @@ function GamePage() {
     return (
         <div className="MainPage">
             <NavBar />
+            <div className="boxVoltar">
+                <button className="btnVoltar" onClick={() => navigate(-1)}>
+                    <BsArrowLeft size={20} />
+                    Voltar
+                </button>
+            </div>
             {loading && (<AlertBox message="Carregando jogo" />)}
             {!loading && (
                 <div className="contetPage">
@@ -60,6 +69,14 @@ function GamePage() {
                                         alt={jogo.name}
                                         className="previewImage"
                                     />
+                                    <div className="BoxSobre">
+                                        <p>
+                                            ola penis
+                                        </p>
+                                        <p>
+                                            {jogo.description_raw}
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
 
@@ -127,6 +144,7 @@ function GamePage() {
                                 </div>
                             </div>
                         </div>
+
                     </div>
 
                     <div className="boxContainerMain">

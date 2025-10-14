@@ -2,7 +2,7 @@ import { api } from "./conectApi"
 export const getGames = async () => {
     const todosJogos = []
     try {
-        for (let page = 1; page <=2; page++) {
+        for (let page = 1; page <=5; page++) {
             const response = await api.get("/games", {
                 params: {
                     page,

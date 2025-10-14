@@ -46,6 +46,12 @@
     flex: 1;
 
 }
+.BoxSobre > p{
+    margin: 0px;
+    padding: 10px;
+    font-family: 'Roboto', sans-serif; 
+    color: white;
+}
 .boxVideosSumary{
     flex: 2;
 }
@@ -94,7 +100,7 @@
     align-items: center;
     margin-top: 10px;
     padding: 10px;
-    background-color: rgb(85, 84, 84);
+    background-color: rgb(59, 58, 58);
     border-radius: 15px;
 
 }
@@ -159,4 +165,31 @@
     display: flex;
     justify-content: space-between;
     width: 100%;                    
+}
+.boxVoltar {
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+}
+
+.btnVoltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 8px 14px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.btnVoltar:hover {
+    background-color: #444;
 }
