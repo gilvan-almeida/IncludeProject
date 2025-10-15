@@ -1,16 +1,36 @@
-# React + Vite
+# GameHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Um site interativo para buscar, visualizar e avaliar jogos, utilizando a API da RAWG. O usuário pode ver detalhes do jogo, suas plataformas, reviews e dar sua própria nota.
 
-Currently, two official plugins are available:
+## 🖥️ Tecnologias
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React Router
+- CSS / Flexbox / Grid
+- Axios (para requisições à API)
+- React Icons
+- Vercel (deploy)
+- RAWG API (dados de jogos)
 
-## React Compiler
+## 📦 Funcionalidades
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Buscar jogos por nome
+- Visualizar detalhes de cada jogo:
+  - Nome
+  - Data de lançamento
+  - Plataformas disponíveis
+  - Desenvolvedor
+  - Gênero
+  - Classificação etária
+  - Imagem ou vídeo do jogo
+- Ver e adicionar reviews
+- Selecionar nota do usuário para cada jogo
+- Botão para acessar lojas onde o jogo está disponível
+- Layout responsivo para diferentes tamanhos de tela
+- Navbar com barra de pesquisa e links de navegação
 
-## Expanding the ESLint configuration
+## ⚙️ Como rodar o projeto localmente
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone o repositório:  
+```bash
+git clone <URL_DO_REPOSITORIO>
