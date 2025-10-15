@@ -2,7 +2,7 @@
 
 Um site interativo para buscar, visualizar e avaliar jogos, utilizando a API da RAWG. O usuário pode ver detalhes do jogo, suas plataformas, reviews e dar sua própria nota.
 
-## 🖥️ Tecnologias
+## Tecnologias
 
 - React
 - React Router
@@ -19,7 +19,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 - [npm](https://www.npmjs.com/)
 - Navegador (Chrome, Firefox, Edge, etc.)
 
-## 📦 Funcionalidades
+## Funcionalidades
 
 - Buscar jogos por nome
 - Visualizar detalhes de cada jogo:
