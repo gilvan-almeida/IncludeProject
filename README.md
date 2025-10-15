@@ -1,4 +1,4 @@
-# GameHub
+# ReviewGame
 
 Um site interativo para buscar, visualizar e avaliar jogos, utilizando a API da RAWG. O usuário pode ver detalhes do jogo, suas plataformas, reviews e dar sua própria nota.
 
@@ -6,11 +6,18 @@ Um site interativo para buscar, visualizar e avaliar jogos, utilizando a API da 
 
 - React
 - React Router
-- CSS / Flexbox / Grid
 - Axios (para requisições à API)
 - React Icons
 - Vercel (deploy)
 - RAWG API (dados de jogos)
+  
+## Tecnologias necessárias
+
+Antes de rodar o projeto, certifique-se de ter instalado:
+
+- [Node.js](https://nodejs.org/) (versão 16 ou superior)
+- [npm](https://www.npmjs.com/)
+- Navegador (Chrome, Firefox, Edge, etc.)
 
 ## 📦 Funcionalidades
 
@@ -22,15 +29,42 @@ Um site interativo para buscar, visualizar e avaliar jogos, utilizando a API da 
   - Desenvolvedor
   - Gênero
   - Classificação etária
-  - Imagem ou vídeo do jogo
+  - Imagem 
 - Ver e adicionar reviews
-- Selecionar nota do usuário para cada jogo
 - Botão para acessar lojas onde o jogo está disponível
-- Layout responsivo para diferentes tamanhos de tela
 - Navbar com barra de pesquisa e links de navegação
 
-## ⚙️ Como rodar o projeto localmente
+## Como rodar o projeto localmente
 
-1. Clone o repositório:  
-```bash
-git clone <URL_DO_REPOSITORIO>
+1. Crie uma pasta e abra o terminal nela.
+   
+2. Clone o repositório:
+   git clone https://github.com/gilvan-almeida/IncludeProject.git
+   
+3. Abrir Pasta com os arquivos
+   cd IncludeProject
+   
+4. Instalar as dependencias para rodar o projeto.
+   npm i
+   
+5. Para rodar o Projeto.
+   npm run dev
+   
+6. Depois copie o link que vai aparecer no terminal cole no navegador de sua escolha.
+
+## Caso queira ver o projeto funcionando.
+  https://include-project-nine.vercel.app/
+
+## Melhorias Sugeridas.
+
+1.  Melhorar a requisição da api, para que o sistema rode mais rapido.
+   
+3.  Fazer a funcionalidade de adicionar as reviews aos cards.
+
+4.  Fazer o Login funcional, tanto Front quanto Back.
+
+5.  Melhorar a resposividade de algumas partes.
+   
+## Considerações Finais.
+  Levando em consideração o tempo disponível, acredito que consegui me sair bem no desenvolvimento deste projeto. Dediquei bastante atenção aos detalhes, o que acabou consumindo um pouco mais de tempo do que o esperado, e acabei não tendo tanto tempo para outras partes quanto eu gostaria. No entanto, gostei muito do desafio, pois me permitiu aperfeiçoar minhas habilidades e aplicar os conhecimentos adquiridos. Sinto que tive um bom rendimento e consegui entregar um projeto consistente.
+
