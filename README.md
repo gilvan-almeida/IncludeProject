@@ -39,16 +39,16 @@ Antes de rodar o projeto, certifique-se de ter instalado:
 1. Crie uma pasta e abra o terminal nela.
    
 2. Clone o repositório:
-   (git clone https://github.com/gilvan-almeida/IncludeProject.git)
+   (COMANDO: git clone https://github.com/gilvan-almeida/IncludeProject.git)
    
 3. Abrir Pasta com os arquivos:
-   (cd IncludeProject)
+   (COMANDO: cd IncludeProject)
    
 4. Instalar as dependencias para rodar o projeto:
-   (npm i)
+   (COMANDO: npm i)
    
 5. Para rodar o Projeto:
-   (npm run dev)
+   (COMANDO: npm run dev)
    
 6. Depois copie o link que vai aparecer no terminal cole no navegador de sua escolha.
 
