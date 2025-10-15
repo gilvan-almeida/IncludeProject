@@ -26,7 +26,7 @@ function NavBar({ busca, setBusca }){
             <div className="boxLinks">
                 <div className={`linksContainer ${menuOpen ? "active" : ""}`}>
                     <Link to={"/"} onClick={() => setMenuOpen(false)}>Inicio</Link>
-                    <Link to={"/login"} onClick={() => setMenuOpen(false)}>Login</Link>
+                    <Link>Login</Link>
                 </div>
                 <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
                     <GiHamburgerMenu size={25} />
