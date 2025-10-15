@@ -45,7 +45,7 @@ Antes de rodar o projeto, certifique-se de ter instalado:
    (COMANDO: cd IncludeProject)
    
 4. Instalar as dependencias para rodar o projeto:
-   (COMANDO: npm i)
+   (COMANDO: npm i OU npm install)
    
 5. Para rodar o Projeto:
    (COMANDO: npm run dev)
