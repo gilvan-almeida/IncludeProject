@@ -1,19 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import './Style.css'
 import { Link } from "react-router-dom";
 import PesquisaBar from "../PesquisaBar/PesquisaBar";
-import AppRoutes from "../../routes/AppRoute";
 import { IoGameController } from "react-icons/io5";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 function NavBar({ busca, setBusca }){
+    const [menuOpen, setMenuOpen] = useState(false);
+
     return(
         <div className="boxNavbar">
 
             <div className="boxLog">
                 <IoGameController size={25} />
-                <h3 className="tileBox">
-                    GAME
-                </h3>
+                <h3 className="tileBox">GAME</h3>
             </div>
 
             <div className="boxPesquisa">
@@ -24,9 +24,13 @@ function NavBar({ busca, setBusca }){
             </div>
             
             <div className="boxLinks">
-                <Link to={"/"}>Inicio</Link>
-
-                <Link>Login</Link>
+                <div className={`linksContainer ${menuOpen ? "active" : ""}`}>
+                    <Link to={"/"} onClick={() => setMenuOpen(false)}>Inicio</Link>
+                    <Link to={"/login"} onClick={() => setMenuOpen(false)}>Login</Link>
+                </div>
+                <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+                    <GiHamburgerMenu size={25} />
+                </div>
             </div>
             
         </div>
